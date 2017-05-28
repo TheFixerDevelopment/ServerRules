@@ -1,10 +1,10 @@
 name: ServerRules
-description: Lets players know the server rules using the /rules command.
+description: List the rules of your server in a command
 author: kenygamer
 main: kenygamer\ServerRules\Main
 load: POSTWORLD
 version: 1.0.0
-api: [1.8.0,3.0.0-ALPHA4]
+api: 3.0.0
 commands:
     rules:
         usage: /rules
