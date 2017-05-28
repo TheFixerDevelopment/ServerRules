@@ -1,5 +1,4 @@
 <?php
-namespace kenygamer\ServerRules;
 
 /*
  * ServerRules plugin for PocketMine-MP
@@ -15,6 +14,8 @@ namespace kenygamer\ServerRules;
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
 */
+
+namespace kenygamer\ServerRules;
 
 use pocketmine\Player;
 use pocketmine\command\Command;
