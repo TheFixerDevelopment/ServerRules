@@ -1,20 +1,22 @@
 <?php
 namespace kenygamer\ServerRules;
 
-use pocketmine\utils\TextFormat;
-use pocketmine\plugin\PluginBase;
+use pocketmine\Player;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
-use pocketmine\command\CommandSender;
-use pocketmine\command\Command;
-use pocketmine\Player;
+use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase implements Listener{
+	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
-		$this->getLogger()->info(TEXTFORMAT::BLUE . "[ServerRules]" .TEXTFORMAT::RED. " >>" .TEXTFORMAT::AQUA.  "The plugin has been enabled.");
+		$this->getLogger()->info("");
 	}
+	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
         $cmd = strtolower($command->getName());
         switch ($cmd){
