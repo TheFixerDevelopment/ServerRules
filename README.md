@@ -20,3 +20,6 @@ rule8: "8."
 | Command | Usage | Description |
 | ------- |  ----- | ----------- |
 | `/rules` | `/rules` | Displays all server rules listed in the config.yml |
+
+# Permissions
+```yml
