@@ -23,3 +23,42 @@ rule8: "8."
 
 # Permissions
 ```yml
+ command.rules:
+  default: true
+  ```
+  
+  | Default | Description |
+  | ------- | ----------- |
+  | ```false``` | Nobody including OPs can use the command |
+  | ``` true ``` | Everyone can use the command |
+  | ``` op ``` | Only OPs can use the command |
+
+The *default* can be overridden by using a permission handler.
+
+# Download
+
+## User
+
+As a user or client, your MCPE hosting service may allow you to perform a "*quick install*". This means that you could be charged a small commission to enable it.
+
+## Developer
+
+Download **ServerRules** and have your server rules listed in one place. There will be no way to get lost. Your players will have to use **/rules** and they will get the list of rules.
+
+### Step 1. Clone this repository
+
+Via ```git``` in the terminal, or using the download button.
+
+```sh
+git clone https://github.com/kenygamer/ServerRules
+```
+
+### Step 2. Compile it to .phar extension
+
+Compile the files by creating a single file with .phar extension. You can use [PocketMine Tools](https://pmt.mcpe.fun).
+
+### Step 3. Upload .phar and start server
+
+Upload the .phar file to the *plugins/* folder, and run the start script. It is assumed that the server is off.
+
+- Tested on API **1.8.0**
