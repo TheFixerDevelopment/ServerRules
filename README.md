@@ -15,3 +15,7 @@ rule8: "8."
 # Please do not try to add more rules, otherwise there will be problems loading the file information
 ...
 ```
+
+# Commands
+| Command | Usage | Description |
+| `/rules` | `/rules` | Shows all the server rules |
