@@ -19,4 +19,4 @@ rule8: "8."
 # Commands
 | Command | Usage | Description |
 | ------- |  ----- | ----------- |
-| `/rules` | `/rules` | Shows all the server rules |
+| `/rules` | `/rules` | Displays all server rules listed in the config.yml |
