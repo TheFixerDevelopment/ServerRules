@@ -1,6 +1,21 @@
 <?php
 namespace kenygamer\ServerRules;
 
+/*
+ * ServerRules plugin for PocketMine-MP
+ * Copyright (C) 2017 Kevin Andrews <https://github.com/kenygamer/ServerRules>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+*/
+
 use pocketmine\Player;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -13,16 +28,20 @@ class Main extends PluginBase implements Listener{
 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+		$this->getLogger()->info("§aEnabling " . $this->getDescription()->getFullName() . "...");
 		$this->saveDefaultConfig();
-		$this->getLogger()->info("");
 	}
+	
+	 public function onDisable(){
+                $this->getLogger()->info("§cDisabling " . $this->getDescription()->getFullName() . "...");
+	 }
 	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
         $cmd = strtolower($command->getName());
         switch ($cmd){
             case "rules":
                 if (!($sender instanceof Player)){
-                    $sender->sendMessage(TEXTFORMAT::GOLD . "--------[ServerRules]--------");
+                    $sender->sendMessage("§e--------§4[ServerRules]§e-------");
                     $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule1"));
                     $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule2"));
                     $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule3"));
@@ -35,7 +54,7 @@ class Main extends PluginBase implements Listener{
                 }
                 $player = $this->getServer()->getPlayer($sender->getName());
                 if ($player->hasPermission("command.rules")){
-                    $sender->sendMessage("--------[ServerRules]--------");
+                    $sender->sendMessage("§e--------§4[ServerRules]§e--------");
                     $sender->sendMessage("- " . $this->getConfig()->get("rule1"));
                     $sender->sendMessage("- " . $this->getConfig()->get("rule2"));
                     $sender->sendMessage("- " . $this->getConfig()->get("rule3"));
