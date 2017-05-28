@@ -18,4 +18,5 @@ rule8: "8."
 
 # Commands
 | Command | Usage | Description |
+| -------   -----   ----------- |
 | `/rules` | `/rules` | Shows all the server rules |
