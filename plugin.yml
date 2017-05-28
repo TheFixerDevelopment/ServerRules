@@ -8,8 +8,8 @@ api: 3.0.0
 commands:
     rules:
         usage: /rules
-        description: Displays the list of the server rules
+        description: Displays all the server rules
 permissions:
     command.rules:
         default: true
-        description: Allow players to use the /rules command
+        description: Allows players to use the /rules command
