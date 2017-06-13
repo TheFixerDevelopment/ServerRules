@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener{
             case "rules":
                 if (!($sender instanceof Player)){
                     $sender->sendMessage("§e--------§4[ServerRules]§e-------");
-			// Not sure if the following line is OK
+			// Not sure if the following line is OK.
 			foreach($this->getConfig()->get("rules") as $rule){
 				$sender->sendMessage($rule);
 			}
@@ -52,7 +52,7 @@ class Main extends PluginBase implements Listener{
                 $player = $this->getServer()->getPlayer($sender->getName());
                 if ($player->hasPermission("command.rules")){
                     $sender->sendMessage("§e--------§4[ServerRules]§e--------");
-			// Not sure if the the following line is OK
+			// Not sure if the the following line is OK.
 			foreach($this->getConfig()->get("rules") as $rule){
 				$sender->sendMessage($rule);
 			}
