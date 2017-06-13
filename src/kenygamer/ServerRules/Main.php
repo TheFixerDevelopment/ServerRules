@@ -43,27 +43,19 @@ class Main extends PluginBase implements Listener{
             case "rules":
                 if (!($sender instanceof Player)){
                     $sender->sendMessage("§e--------§4[ServerRules]§e-------");
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule1"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule2"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule3"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule4"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule5"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule6"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule7"));
-                    $sender->sendMessage(TEXTFORMAT::GREEN . "- " . $this->getConfig()->get("rule8"));
+			// Not sure if the following line is OK
+			foreach($this->getConfig()->get("rules") as $rule){
+				$sender->sendMessage($rule);
+			}
                     return true;
                 }
                 $player = $this->getServer()->getPlayer($sender->getName());
                 if ($player->hasPermission("command.rules")){
                     $sender->sendMessage("§e--------§4[ServerRules]§e--------");
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule1"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule2"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule3"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule4"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule5"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule6"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule7"));
-                    $sender->sendMessage("- " . $this->getConfig()->get("rule8"));
+			// Not sure if the the following line is OK
+			foreach($this->getConfig()->get("rules") as $rule){
+				$sender->sendMessage($rule);
+			}
                     return true;
                 }
                 break;
