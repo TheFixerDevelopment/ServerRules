@@ -1,11 +1,11 @@
 # Enter the server rules below between the quotation marks
-rule1: "1."
-rule2: "2."
-rule3: "3."
-rule4: "4."
-rule5: "5."
-rule6: "6."
-rule7: "7."
-rule8: "8."
-# Please do not try to add more rules, otherwise there will be problems loading the file information
+rules:
+ - "1.-"
+ - "2.-"
+ - "3.- "
+ - "4.- "
+ - "5.- "
+ 
+# You can add rules inserting a space and then - ""
+# If you want to remove rules remove the whole line
 ...
