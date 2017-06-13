@@ -1,10 +1,9 @@
 name: ServerRules
-description: List the rules of your server in a command
-author: kenygamer
 main: kenygamer\ServerRules\Main
-load: POSTWORLD
 version: 1.3.0
 api: 3.0.0
+author: kenygamer
+website: github.com/kenygamer/ServerRules
 commands:
     rules:
         usage: /rules
