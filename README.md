@@ -5,11 +5,11 @@ Many of us (including myself) put the server rules on signs. That's a matter of 
 ```yml
 # Enter the server rules below between the quotation marks
 rules:
- - "1.-"
- - "2.-"
- - "3.- "
- - "4.- "
- - "5.- "
+ - "Rule 1."
+ - "Rule 2."
+ - "Rule 3."
+ - "Rule 4."
+ - "Rule 5."
  
 # You can add rules inserting a space and then - ""
 # If you want to remove rules remove the whole line
