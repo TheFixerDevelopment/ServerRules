@@ -1,18 +1,18 @@
 ![ServerRules](http://preview.ibb.co/fnsoha/IMG_0028.png)
 
-Many of us (including myself) put the server rules on signs. That's a matter of the past, because now, whatever it is, there will be no way for server rules to be lost. ServerRules is a plugin for PocketMine-MP that allows you to list the rules in the **/rules** command. They must be added, each one, in the **config.yml**. Up to 8 rules can be added.
+Many of us (including myself) put the server rules on signs. That's a matter of the past, because now, whatever it is, there will be no way for server rules to be lost. ServerRules is a plugin for PocketMine-MP that allows you to list the rules in the **/rules** command. They must be added, each one, in the **config.yml**. You can add as many rules as you want.~~Up to 8 rules can be added~~
 
 ```yml
 # Enter the server rules below between the quotation marks
-rule1: "1."
-rule2: "2."
-rule3: "3."
-rule4: "4."
-rule5: "5."
-rule6: "6."
-rule7: "7."
-rule8: "8."
-# Please do not try to add more rules, otherwise there will be problems loading the file information
+rules:
+ - "1.-"
+ - "2.-"
+ - "3.- "
+ - "4.- "
+ - "5.- "
+ 
+# You can add rules inserting a space and then - ""
+# If you want to remove rules remove the whole line
 ...
 ```
 
@@ -37,28 +37,30 @@ The *default* can be overridden by using a permission handler.
 
 # Download
 
-## User
+## Client
 
-As a user or client, your MCPE hosting service may allow you to perform a "*quick install*". This means that you could be charged a small commission to enable it.
+If you are a client of a MCPE server hosting service, **ServerRules** may be one more plugin in the *quick download* list, if not, you can suggest them to add it so you can use it on your server, in exchange for a small commission, if so.
 
+Otherwise or if you were unable to follow download method **1**, you can check if your hosting service gives you FTP access to the server files; if so please go to *Releases* and preferably look for the latest available release to download the plugin in *.phar* format, and finally upload it in the *plugins/* folder.
+ 
 ## Developer
-
-Download **ServerRules** and have your server rules listed in one place. There will be no way to get lost. Your players will have to use **/rules** and they will get the list of rules.
 
 ### Step 1. Clone this repository
 
-Via ```git``` in the terminal, or using the download button.
+Via ```git``` in the terminal (Shell access required)
 
 ```sh
-git clone https://github.com/kenygamer/ServerRules
+git --recursive clone https://github.com/kenygamer/ServerRules
 ```
 
-### Step 2. Compile it to .phar extension
+### Step 2. Compile it to get a single PHAR file
 
-Compile the files by creating a single file with .phar extension. You can use [PocketMine Tools](https://pmt.mcpe.fun).
+Compile the files obtained after performing the `git clone`. You can use the *sunnyct's* console application [View phar compiler](https://github.com/sunnyct/phar-compiler) that will allow you to complete this step.
 
-### Step 3. Upload .phar and start server
+### Step 3. Upload PHAR file and start the server
 
-Upload the .phar file to the *plugins/* folder, and run the start script. It is assumed that the server is off.
+Upload the compressed file to the *plugins/* folder and restart the server. The plugin should be enabled and run without problems. If so, you can submit an issue and I'll try to fix it as soon as possible.
 
-- Tested on API **1.8.0**
+### Version tests
+- [X] Version 1.0.0
+- [ ] Version 1.3.0
