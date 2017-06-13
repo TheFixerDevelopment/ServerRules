@@ -16,6 +16,9 @@ rules:
 ...
 ```
 
+**ServerRules is now in version 1.3!**
+- Add as many rules as you want in the config.yml
+
 # Commands
 | Command | Usage | Description |
 | ------- |  ----- | ----------- |
