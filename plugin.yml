@@ -5,10 +5,10 @@ api: [3.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA
 author: kenygamer
 website: github.com/kenygamer/ServerRules
 commands:
-    rules:
-        usage: /rules
-        description: Displays all the server rules
+ rules:
+  usage: /rules
+  description: Displays all the server rules
 permissions:
-    command.rules:
-        default: true
-        description: Allows players to use the /rules command
+ command.rules:
+  default: true
+  description: Allows players to use the /rules command
