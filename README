@@ -7,7 +7,7 @@
                                                                                                                     
 ______ ______ ______ ______ ______ ______ ______ ______ ______
 
-A PocketMine-MP plugin that allows you to change that traditional and insecure method of listing your server rules. From now on, no matter what happens, rules will remain in /rules even if your rule board gets griefed. You can list as many rules as you want by copying and pasting the format of the first three lines of rules in the config.yml.
+ServerRules is a PocketMine-MP plugin that allows you to change that traditional and insecure way of listing your server rules. From now on, no matter what happens, rules will remain in /rules even if your rule board gets griefed. You can list as many rules as you want by copying and pasting the format of the first three lines of rules in the config.yml.
 
 Features:
 - Save your server rules in a single command: /rules.
