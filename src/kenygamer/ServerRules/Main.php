@@ -25,33 +25,57 @@ use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener {
 	
-	public function onEnable(){
+	/**
+	 * onEnable()
+	 *
+	 * Plugin enable
+	 *
+	 * @return void
+	 */
+	public function onEnable() {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info("§aEnabling " . $this->getDescription()->getFullName() . "...");
 		$this->saveDefaultConfig();
 	}
 	
-	 public function onDisable(){
+	 /**
+	  * onDisable()
+	  *
+	  * Plugin disable
+	  *
+	  * @return void
+	  */
+	 public function onDisable() {
                 $this->getLogger()->info("§cDisabling " . $this->getDescription()->getFullName() . "...");
 	 }
 	
+	/**
+	 * onCommand()
+	 *
+	 * Plugin commands
+	 *
+	 * @param CommandSender $sender
+	 * @param Command $command
+	 * @param string $label
+	 * @param array @args
+	 */
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
         $cmd = strtolower($command->getName());
         switch ($cmd){
             case "rules":
-                if (!($sender instanceof Player)){
+                if (!($sender instanceof Player)) {
                     $sender->sendMessage("§2--------§4[ServerRules]§2-------");
-			foreach($this->getConfig()->get("rules") as $rule){
+			foreach($this->getConfig()->get("rules") as $rule) {
 				$sender->sendMessage($rule);
 			}
                     return true;
                 }
                 $player = $this->getServer()->getPlayer($sender->getName());
-                if ($player->hasPermission("command.rules")){
+                if ($player->hasPermission("command.rules")) {
                     $sender->sendMessage("§2--------§4[ServerRules]§2--------");
-			foreach($this->getConfig()->get("rules") as $rule){
+			foreach($this->getConfig()->get("rules") as $rule) {
 				$sender->sendMessage($rule);
 			}
                     return true;
@@ -60,4 +84,3 @@ class Main extends PluginBase implements Listener{
             }
         }
     }
-?>
