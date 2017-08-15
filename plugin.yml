@@ -2,7 +2,7 @@ name: ServerRules
 main: kenygamer\ServerRules\Main
 version: 1.3.0
 api: [3.0.0, 3.0.0-ALPHA1, 3.0.0-ALPHA2, 3.0.0-ALPHA3, 3.0.0-ALPHA4, 3.0.0-ALPHA5, 3.0.0-ALPHA6, 3.0.0-ALPHA7]
-author: kenygamer
+author: Zeao
 website: github.com/kenygamer/ServerRules
 commands:
  rules:
