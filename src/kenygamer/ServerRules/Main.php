@@ -61,12 +61,12 @@ class Main extends PluginBase implements Listener {
 	 * @param string $label
 	 * @param array @args
 	 */
-	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
+	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
         $cmd = strtolower($command->getName());
         switch ($cmd){
             case "rules":
                 if (!($sender instanceof Player)) {
-                    $sender->sendMessage("§2--------§4[ServerRules]§2-------");
+                    $sender->sendMessage("§2-------§6Void§bSkyBlock§cPE §dRules]§2-------");
 			foreach($this->getConfig()->get("rules") as $rule) {
 				$sender->sendMessage($rule);
 			}
@@ -74,7 +74,7 @@ class Main extends PluginBase implements Listener {
                 }
                 $player = $this->getServer()->getPlayer($sender->getName());
                 if ($player->hasPermission("command.rules")) {
-                    $sender->sendMessage("§2--------§4[ServerRules]§2--------");
+                    $sender->sendMessage("§2--------§6Void§bSkyBlock§cPE §dRules§2--------");
 			foreach($this->getConfig()->get("rules") as $rule) {
 				$sender->sendMessage($rule);
 			}
